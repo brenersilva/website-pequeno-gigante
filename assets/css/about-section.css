@@ -1,0 +1,218 @@
+.about-section {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #f1f2f6;
+}
+
+.about-section .about-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: calc(100% - 220px);
+  padding-top: 50px;
+
+}
+
+.about-section .about-container .text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 5%;
+}
+
+.about-section .about-container .text-container p {
+  font-size: 16px;
+  color: #ff0000;
+  line-height: 2.5em;
+  text-align: left;
+}
+
+.about-section .about-container .image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%
+}
+
+.about-section .about-container .image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.about-section .cards-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 150px 0;
+}
+
+.about-section .cards-container .card {
+  width: 245px;
+  height: 245px;
+  background: #ff0000;
+  transform: rotate(-45deg);
+  border-radius: 20px;
+  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.7);
+}
+
+.about-section .cards-container .card:nth-child(2) {
+  margin-top: 200px;
+}
+
+.about-section .cards-container .card .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 245px;
+  height: 245px;
+  transform: rotate(45deg);
+}
+
+.about-section .cards-container .card .content h3 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.about-section .cards-container .card .content p {
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  padding: 0 20px;
+  margin: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .about-section {
+    width: 100vw;
+    height: 100%;
+  }
+  
+  .about-section .about-container {
+    height: 100%;
+  }
+  
+  .about-section .about-container .text-container,
+  .about-section .about-container .image-container {
+    width: 100%;
+  }
+  
+  .about-section .about-container .image-container img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .about-section .about-container .text-container p {
+    text-align: center;
+    padding-top: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {  
+  .about-section .about-container .text-container p {
+    text-align: left;
+    padding-top: 50px;
+  }  
+
+  .about-section .cards-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-section .cards-container .card:nth-child(2) {
+    margin-left: 150px;
+    margin-top: 0;
+  }
+
+  .about-section .cards-container .card:nth-child(1),
+  .about-section .cards-container .card:nth-child(3) {
+    margin-right: 150px;
+  }
+
+  .about-section .cards-container .card {
+    overflow: hidden;
+  }
+
+  .about-section .cards-container .card .content {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-section .cards-container .card:nth-child(2) {
+    margin-left: 0;
+  }
+
+  .about-section .cards-container .card:nth-child(1),
+  .about-section .cards-container .card:nth-child(3) {
+    margin-right: 0;
+  }
+
+  .about-section .cards-container .card:nth-child(2),
+  .about-section .cards-container .card:nth-child(3) {
+    margin-top: 150px;
+  }
+
+  .about-section .cards-container .card {
+    overflow: hidden;
+  }
+
+  .about-section .cards-container .card .content {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .about-section .cards-container .card,
+  .about-section .cards-container .card .content {
+    width: 225px;
+    height: 225px;
+  }
+}
+
+.image-container .gradient-image-top,
+.image-container .gradient-image-right,
+.image-container .gradient-image-bottom,
+.image-container .gradient-image-left {
+  position: absolute;
+  z-index: 999;
+}
+
+.image-container .gradient-image-top {
+  width: 100%;
+  height: 10%;
+  top: 0;
+  background: linear-gradient(to bottom, rgb(241, 242, 246, 1), rgba(241, 242, 246, .6), rgba(241, 242, 246, 0));
+}
+
+.image-container .gradient-image-right {
+  width: 10%;
+  height: 100%;
+  right: 0;
+  background: linear-gradient(to left, rgb(241, 242, 246, 1), rgb(241, 242, 246, 1), rgba(241, 242, 246, .6), rgba(241, 242, 246, 0));
+}
+
+.image-container .gradient-image-bottom {
+  width: 100%;
+  height: 10%;
+  bottom: 0;
+  background: linear-gradient(to top, rgb(241, 242, 246, 1), rgba(241, 242, 246, .6), rgba(241, 242, 246, 0));
+}
+
+.image-container .gradient-image-left {
+  width: 10%;
+  height: 100%;
+  left: 0;
+  background: linear-gradient(to right, rgb(241, 242, 246, 1), rgb(241, 242, 246, 1), rgba(241, 242, 246, .6), rgba(241, 242, 246, 0));
+}
