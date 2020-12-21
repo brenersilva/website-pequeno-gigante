@@ -47,6 +47,7 @@
 }
 
 .buttons button {
+  font-family: OpenDysloexic;
   background: #ff0000;
   border: none;
   margin: 15px 0;
@@ -123,6 +124,20 @@
   border: 0;
   z-index: 2;
   outline: none;
+}
+
+.mobile {
+  display: none;
+  width: calc(100% - 80px);
+  position: absolute;
+  bottom: 100px;
+  height: 45px;
+}
+
+.mobile.text p {
+  color: #ff0000;
+  padding-right: 10%;
+  text-align: right;
 }
 
 .frame {
@@ -266,8 +281,23 @@
     font-size: 18px;
   }
 
+  .button-container .text {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .mobile.text,
+  .mobile.text.italic {
+    margin: 0;
+    padding: 0;
+  }
+
   .text p {
     margin-left: 10%;
+    margin: 0;
   }
 
   .frame {

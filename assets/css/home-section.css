@@ -50,6 +50,7 @@
   font-size: 16px !important;
   text-transform: uppercase;
   font-weight: 700 !important;
+  font-family: OpenDysloexic;
 }
 
 .header_area .menu_area .navbar .navbar-nav li a:hover {
@@ -110,6 +111,40 @@
   .dropdown {
     flex-direction: column;
   }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+  }
+
+  .nav-links {
+    padding: 0;
+    background: transparent;
+    background: linear-gradient(to bottom, #003770, #195591, #27639f);
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    clip-path: circle(100px at 90% -20%);
+    -webkit-clip-path: circle(100px at 90% -20%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+    z-index: 1;
+    top: 0;
+  }
+
+  .nav-links.open {
+    clip-path: circle(1100px at 90% -10%);
+    -webkit-clip-path: circle(1100px at 90% -10%);
+    pointer-events: all;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -122,8 +157,8 @@
 
 @media screen and (max-width: 420px) {
   .navbar button {
-    top: 15px;
-    right: 15px;
+    top: 50px;
+    right: 20px;
   }
 
   .header_area .menu_area .navbar {
@@ -142,7 +177,7 @@
 .home-section {
   width: 100%;
   height: 100vh;
-  background: url('../images/home-bg.png');
+  background: url('../images/home-bg3.png');
   background-size: auto;
   background-repeat: no-repeat;
   background-position: right;

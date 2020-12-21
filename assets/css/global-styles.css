@@ -1,10 +1,12 @@
 @font-face {
   font-family: Roboto;
   src: url(../fonts/Roboto-Regular.ttf);
+  font-family: OpenDysloexic;
+  src: url(../fonts/OpenDyslexicAlta-Regular.otf);
 }
 
 body {
-  font-family: Roboto;
+  font: Roboto;
   background: #f1f2f6;
   background: linear-gradient(to right, #ffff00, #ffff00, #ff0000);
 }
@@ -89,6 +91,7 @@ body {
 }
 
 .title-container .title h2 {
+  font-family: OpenDysloexic;
   font-size: 24px;
   font-weight: 900;
   text-transform: uppercase;
@@ -100,21 +103,25 @@ body {
 }
 
 @media screen and (max-width: 1024px) {
-  .gradient-top,
-  .gradient-bottom {
+  .gradient-top {
     height: 20%;
   }
+  .gradient-bottom {
+    height: 40%;
+    background: linear-gradient(to bottom, rgba(241, 242, 246, 0), rgba(241, 242, 246, .8),  rgba(241, 242, 246, 1));
+  }
+
 
   .title-container {
     margin: 50px 0 30px 0;
   }
   
   .title-container .title {
-    max-width: 260px;
+    max-width: 270px;
     width: 80%
   }
   
   .title-container .title h2 {
-    font-size: 20px;
+    font-size: 18px;
   }
 }

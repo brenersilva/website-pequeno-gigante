@@ -16,13 +16,13 @@ try {
     $mail->isSMTP();
     $mail->Host = 'mail.massaspequenogigante.com.br';
     $mail->SMTPAuth = true;
-    $mail->Username = 'contato@email.com.br';
-    $mail->Password = 'password';
+    $mail->Username = 'atendimento@massaspequenogigante.com.br';
+    $mail->Password = '@P@st3l201A';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = 587;
 
     $mail->setFrom('contato@email.com.br', 'Contato do cliente');
-    $mail->addAddress('contato@email.com.br', 'Contato Pequeno Gigante Massas Alimenticias');
+    $mail->addAddress('atendimento@massaspequenogigante.com.br', 'Contato Pequeno Gigante Massas Alimenticias');
 
     $mail->isHTML(true);
 
@@ -36,6 +36,6 @@ try {
     $mail->ClearAttachments();
 
 } catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
 ?>
